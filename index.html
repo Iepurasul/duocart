@@ -810,102 +810,120 @@
         }
         
         /* Contact Section */
-        .contact {
-            background: linear-gradient(135deg, rgba(42, 157, 143, 0.1) 0%, rgba(233, 196, 106, 0.1) 100%);
-        }
-        
-        .centered-contact-info {
+.contact-container {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 2rem;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
 }
 
 .contact-info {
+    flex: 1;
+    min-width: 300px;
     background: white;
     padding: 3rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-    animation: fadeIn 1s ease;
+    animation: fadeInLeft 1s ease;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    animation: fadeInRight 1s ease;
 }
 
 .contact-info h3 {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: var(--secondary);
 }
 
-.contact-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+.contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
     margin-bottom: 2rem;
+    color: var(--dark);
+}
+
+.contact-details {
+    margin-top: 2rem;
 }
 
 .contact-item {
-    flex: 1;
-    min-width: 250px;
-    text-align: left;
-    background: rgba(248, 249, 250, 0.7);
-    padding: 1.5rem;
-    border-radius: 10px;
-    transition: all 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
 }
 
-.contact-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.contact-icon {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-right: 1rem;
+    margin-top: 0.3rem;
 }
 
-.social-links {
-    justify-content: center;
-    margin-top: 2rem;
+.contact-text h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    color: var(--dark);
 }
-        
-        .contact-info h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--secondary);
+
+.contact-text p, .contact-text a {
+    font-size: 1rem;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-text a:hover {
+    color: var(--primary);
+}
+
+.form-group {
+            margin-bottom: 20px;
         }
         
-        .contact-details {
-            margin-bottom: 2rem;
-        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
         }
         
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-icon {
-            font-size: 1.2rem;
-            color: var(--primary);
-            margin-right: 1rem;
-            margin-top: 0.3rem;
-        }
-        
-        .contact-text h4 {
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-            color: var(--dark);
-        }
-        
-        .contact-text p, .contact-text a {
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             font-size: 1rem;
-            color: #666;
-            text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s;
         }
         
-        .contact-text a:hover {
-            color: var(--primary);
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
         }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+@media (max-width: 768px) {
+    .contact-info,
+    .contact-form {
+        min-width: 100%;
+    }
+}
         
         .social-links {
             display: flex;
@@ -937,7 +955,7 @@
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             animation: fadeInRight 1s ease;
-             max-width: 900px;
+             max-width: 400px;
              margin: 0 auto
             
         }
@@ -1693,62 +1711,56 @@
     </section>
 
     <!-- Contact Section -->
-    <!-- Contact Section -->
 <section class="section contact" id="contact">
     <div class="section-title">
-        <h2>Contact Us</h2>
-        <p>Aici vei introduce textul introductiv despre cum pot clienții să ia legătura. Acesta este un text placeholder.</p>
+        <h2>Contactează-ne</h2>
     </div>
-    
     <div class="contact-container">
         <div class="contact-info">
-            <h3>Get In Touch</h3>
-            <p>Have questions about our products or services? Feel free to reach out to us through any of the following methods or by filling out the contact form.</p>
+            <h3>Alătură-te Comunității Noastre</h3>
+            <p>Dacă ești interesat să te alături federației noastre, să participi la cursuri sau evenimente, sau dacă ai întrebări despre karate, nu ezita să ne contactezi.</p>
             <div class="contact-details">
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>123 Paper Street, Bucharest, Romania</span>
+                    <span>Strada Sporturilor 10, București, România</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
-                    <span>+40 123 456 789</span>
+                    <span>+40 21 123 4567</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <span>info@doucart.com</span>
+                    <span>contact@karateromania.ro</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-clock"></i>
-                    <span>Monday-Friday: 9:00 - 18:00<br>Saturday: 10:00 - 14:00</span>
+                    <span>Luni-Vineri: 9:00 - 20:00<br>Sâmbătă: 10:00 - 15:00</span>
                 </div>
             </div>
         </div>
-        
-        <div class="contact-form">
-            <form id="contactForm" action="https://formspree.io/f/xnnvavpr" method="POST">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" class="form-control" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-                <div id="formStatus" style="margin-top: 15px;"></div>
-            </form>
+           <div class="contact-form">
+    <form id="contactForm" action="https://formspree.io/f/xnnvavpr" method="POST">
+        <div class="form-group">
+            <label for="name">Nume complet</label>
+            <input type="text" id="name" name="name" required>
         </div>
-    </div>
+        <div class="form-group">
+            <label for="email">Adresă de email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Număr de telefon</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+            <label for="message">Mesajul tău</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn">Trimite Mesaj</button>
+        <div id="formStatus" style="margin-top: 15px;"></div>
+    </form>
 </div>
-    </section>
+</section>
 
     <!-- Footer -->
     <footer>
@@ -1889,17 +1901,47 @@
         });
     });
     
-    // Form submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Here you would typically send the form data to a server
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
-    }
+    // Form Submission with Fetch API
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+
+if(contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        submitButton.textContent = 'Se trimite...';
+        formStatus.textContent = '';
+        formStatus.style.color = '';
+
+        try {
+            const formData = new FormData(contactForm);
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if(response.ok) {
+                formStatus.textContent = 'Mulțumim pentru mesaj! Vă vom contacta în cel mai scurt timp posibil.';
+formStatus.className = 'success';
+                contactForm.reset();
+            } else {
+                throw new Error('Eroare la trimiterea formularului');
+            }
+        } catch (error) {
+            formStatus.textContent = 'A apărut o eroare. Vă rugăm să încercați din nou mai târziu.';
+formStatus.className = 'error';
+            console.error('Error:', error);
+        } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Trimite Mesaj';
+        }
+    });
+}
 
 // Intersection Observer for scroll animations
     const animateOnScroll = () => {
