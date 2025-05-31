@@ -11,3 +11,5 @@ Any unauthorized copying, reuse, or distribution without the express
 written consent of the author is STRICTLY PROHIBITED and constitutes
 a violation of the law. Breaching these terms will result in legal action
 according to applicable laws.
+
+© 2025 andreistx. Toate drepturile rezervate.
