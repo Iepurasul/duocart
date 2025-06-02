@@ -37,7 +37,19 @@ according to applicable laws.
             padding: 0;
             box-sizing: border-box;
         }
-   
+
+/* Schimbă culoarea de selecție pe tot site-ul */
+::selection {
+  background: #309c8c; /* Verde-albăstrui deschis */
+  color: white; /* Culoarea textului selectat (opțional) */
+}
+
+/* Pentru compatibilitate cu browsere mai vechi */
+::-moz-selection {
+  background: #309c8c;
+  color: white;
+}
+	    
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--light);
